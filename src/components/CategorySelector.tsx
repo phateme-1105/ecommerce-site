@@ -32,7 +32,7 @@ const CategorySelector = ({ showFilter }: Props) => {
               }`}
               onClick={() => toggleCategory(item)}
             >
-              {item}|
+              {item}
             </p>
           </div>
         ))}
