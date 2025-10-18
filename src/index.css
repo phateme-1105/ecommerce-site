@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap");
+@import "tailwindcss";
+
+* {
+  font-family: "Outfit", sans-serif;
+}
+html{
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.prata-regular {
+  font-family: "Prata", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.content {
+  width: 850px;
+  margin: auto;
+  /* Same height as footer */
+  margin-bottom: 350px;
+  padding: 100px 0;
+}
+
+/* block */
+
+.block {
+  padding: 60px 30px;
+}
+.container {
+ 
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width:1300px) {
+  .container{
+ max-width: 1400px;
+ margin: 0 auto;
+  }
+}
+
+
+/* Accordion */
+
+.collapsible__content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.collapsible__chevron{
+  transition: transform 0.3s ease;
+}
+
+.collapsible__content{
+  max-height: 0;
+  opacity: 0;
+  transform: all 0.3s ease;
+}
+
+.collapsible--expanded .collapsible__chevron {
+  transform: rotate(90deg);
+}
+
+.collapsible--expanded .collapsible__content {
+  max-height: 100vh;
+  opacity: 1;
+}
+
+@media screen and (min-width: 640px) {
+  .collapsible__chevron {
+    display: none;
+  }
+
+  .collapsible__content {
+    opacity: 1;
+    max-height: 100%;
+  }
+}
+
+/* border */
+.border {
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+}
+
+/* scrollbar */
+.custom::-webkit-scrollbar {
+  height: 6px; /* ارتفاع scrollbar افقی */
+}
+.custom::-webkit-scrollbar-track {
+  background: #f1f1f1; /* پس‌زمینه track */
+  border-radius: 10px;
+}
+.custom::-webkit-scrollbar-thumb {
+  background: #888; /* رنگ thumb */
+  border-radius: 10px;
+}
+.custom::-webkit-scrollbar-thumb:hover {
+  background: #555; /* هنگام هاور */
+}
+
+/* برای فایرفاکس */
+.custom {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
